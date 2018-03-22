@@ -19,11 +19,11 @@ p {
   min-height: 100%;
 }
 .bgimg-2 {
-  background: url(../img/elitefon.ru-2919.jpg);
+  background: url(../img/elitefon.ru-39333.jpg);
   min-height: 600px;
 }
 .bgimg-3 {
-  background: url(../img/elitefon.ru-33749.jpg);
+  background: url(../img/elitefon.ru-19035.jpg);
   min-height: 600px;
 }
 .bgimg-4 {
@@ -59,3 +59,36 @@ p {
   background: #eee;
   color: #555;
 }
+
+.slider {
+  width: 500px;
+  height: 300px;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  border:1px solid black;
+  position: relative;
+  background-size:contain;
+  animation: anslider 10s infinite;
+  background-size: cover;
+}
+@keyframes anslider {
+  0%, 33% {
+    background: url(../img/elitefon.ru-15376.jpg);
+  }
+  33%, 63% {
+    background: url(../img/elitefon.ru-19035.jpg);
+  }
+  66%, 97% {
+    background: url(../img/elitefon.ru-19788.jpg);
+  }
+}
+
+
+
+
+
+
+
+
+
