@@ -95,7 +95,7 @@ p {
   display: flex;
   justify-content: center;
 }
-#jshom1, #jshom2, #jshom3{
+#jshom{
   margin: 0 50px 0 50px;
   text-align: center;
   line-height: 2em;
