@@ -54,3 +54,22 @@ function fe6() {
     }
     alert(a);
 }
+function fe7() {
+    var a=[],str,stop=0,kl=0,sum=0,long;
+     str=prompt();
+     if (str==null || isNaN(str) || str===''){alert('Ввод остановлен')}
+         else {
+         a[a.length] = str;
+         do {
+             str = prompt();
+             if (str==null || isNaN(str) || str==='') {stop=1} else {a[a.length] = str}
+         }
+         while (stop===0);
+         long=a.length;
+         alert('Ввод остановлен');
+         for(kl=0;kl<long;kl++){
+             sum=sum+parseInt(a[kl]);
+         }
+        }
+        alert(sum);
+}
