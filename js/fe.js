@@ -33,9 +33,10 @@ function fe4() {
         case 'Админ':
             password = prompt('Введите пароль');
             if (password === truepassword) {
-                alert('Добро пожаловать!'); break;}
-                else if (password == null){alert('Вход отменен'); break;}
-                else {alert('Пароль неверен'); break;}
+                alert('Добро пожаловать!');}
+                else if (password == null){alert('Вход отменен');}
+                else {alert('Пароль неверен');}
+            break;
         default:
             alert('Я вас не знаю');
     }
@@ -49,27 +50,43 @@ function fe5() {
 function fe6() {
     var i,a=[];
 
-    for(i=2;i<11;i+=2) {
+    for(i=2;i<=10;i+=2) {
      a[a.length]=i;
     }
     alert(a);
 }
 function fe7() {
-    var a=[],str,stop=0,kl=0,sum=0,long;
-     str=prompt();
-     if (str==null || isNaN(str) || str===''){alert('Ввод остановлен')}
-         else {
-         a[a.length] = str;
-         do {
-             str = prompt();
-             if (str==null || isNaN(str) || str==='') {stop=1} else {a[a.length] = str}
-         }
-         while (stop===0);
-         long=a.length;
-         alert('Ввод остановлен');
-         for(kl=0;kl<long;kl++){
-             sum=sum+parseInt(a[kl]);
-         }
+     var a=[],str,stop=0,kl=0,sum=0,long;
+      str=prompt();
+      if (str==null || isNaN(str) || str===''){alert('Ввод остановлен')}
+          else {
+          a[a.length] = str;
+          do {
+              str = prompt();
+              if (str==null || isNaN(str) || str==='') {stop=1} else {a[a.length] = str}
+          }
+          while (stop===0);
+          long=a.length;
+          alert('Ввод остановлен');
+          for(kl=0;kl<long;kl++){
+              sum+=parseInt(a[kl]);
+          }
         }
         alert(sum);
 }
+
+function fe8() {
+   var user={name :"Кирилл", age: "20"};
+    console.log(user.age);
+    user.age='24';
+    console.log(user.age);
+
+    for (var k in user) {
+        console.log(k +' '+ user[k]);
+    }
+    delete user.name;
+    for (var k in user) {
+        console.log(k +' '+ user[k]);
+    }
+    console.log(name in user);
+} git push -u origin master 
