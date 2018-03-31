@@ -74,19 +74,23 @@ function fe7() {
         }
         alert(sum);
 }
-
+// homework 3
 function fe8() {
-   var user={name :"Кирилл", age: "20"};
-    console.log(user.age);
-    user.age='24';
-    console.log(user.age);
-
-    for (var k in user) {
-        console.log(k +' '+ user[k]);
+    var obj={},kl=0;
+     for (i in obj) {
+        if (obj[i]) {alert(false); kl++};
+        break;
+     }
+     if (kl==0) {alert(true)}
+}
+function fe9() {
+    function pow(x,n) {
+        var power=x;
+        for (var i=1; i<n; ++i){
+            power*=x;
+        }
+        alert(power);
     }
-    delete user.name;
-    for (var k in user) {
-        console.log(k +' '+ user[k]);
-    }
-    console.log(name in user);
-} git push -u origin master 
+    var x=prompt('Число'), n=prompt('Степень');
+    ((n>=1)&&(n%1===0))? pow(x,n):alert('Степень не явзляется натуральным числом.')
+}
