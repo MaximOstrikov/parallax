@@ -94,3 +94,28 @@ function fe9() {
     var x=prompt('Число'), n=prompt('Степень');
     ((n>=1)&&(n%1===0))? pow(x,n):alert('Степень не явзляется натуральным числом.')
 }
+function fe10() {
+    var n=+prompt('Введите n'),res=1;
+    var exNumber = prompt('Каким методом вы хотите найти сумму? \n\r Цикл-1 / рекурсия-2 / прогрессия-3');
+    (exNumber == 1) ? first() : (exNumber == 2) ? second() : (exNumber == 3) ? third() : alert("Такого метода не существует. Выберите 1, 2 или 3");
+
+   function first() {
+       for (var i=2; i<=n; ++i){
+           res+=i;
+       }
+       alert(res);
+   }
+   function second(){
+       function sumrec(cif) {
+          if (cif==1) {
+              return cif;
+          } else{
+              return cif+=sumrec(cif-1);
+          }
+       }
+       alert(sumrec(n))
+   }
+   function third(){
+       alert((1+n)*n/2);
+   }
+}
