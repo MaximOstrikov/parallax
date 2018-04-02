@@ -98,14 +98,14 @@ function fe10() {
     var n=+prompt('Введите n'),res=1;
     var exNumber = prompt('Каким методом вы хотите найти сумму? \n\r Цикл-1 / рекурсия-2 / прогрессия-3');
     (exNumber == 1) ? first() : (exNumber == 2) ? second() : (exNumber == 3) ? third() : alert("Такого метода не существует. Выберите 1, 2 или 3");
- // цикл
+ // Цикл
    function first() {
        for (var i=2; i<=n; ++i){
            res+=i;
        }
        alert(res);
    }
- // рекурсия
+ // Рекурсия
    function second(){
        function sumrec(cif) {
           if (cif==1) {
@@ -116,7 +116,7 @@ function fe10() {
        }
        alert(sumrec(n))
    }
- // прогрессия   
+ // Прогрессия
    function third(){
        alert((1+n)*n/2);
    }
