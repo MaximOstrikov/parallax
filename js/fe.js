@@ -110,9 +110,8 @@ function fe10() {
        function sumrec(cif) {
           if (cif==1) {
               return cif;
-          } else{
-              return cif+=sumrec(cif-1);
           }
+              return cif+=sumrec(cif-1);
        }
        alert(sumrec(n))
    }
@@ -120,4 +119,44 @@ function fe10() {
    function third(){
        alert((1+n)*n/2);
    }
+}
+// homework 4
+function fe11() {
+    var word=prompt('Введите слово'), kl=0;
+     word=word.toUpperCase();
+    var arrword=word.split('');
+    var newarr=arrword.slice().reverse();
+
+    for (i=0; i<word.length; i++) {
+        if (arrword[i]===newarr[i]) {} else {alert('Не палиндром'); return;}
+    }
+     alert('Палиндром');
+}
+function fe12() {
+    var firstWord = prompt('Первое слово').toUpperCase(), secondWord = prompt('Второе слово').toUpperCase();
+    var firstArr = firstWord.split('').sort(), secondArr = secondWord.split('').sort();
+    if (firstWord.length === secondWord.length) {
+        for (i = 0; i < firstWord.length; i++) {
+            if (firstArr[i] !== secondArr[i]) {
+                alert('Не анаграмма');
+                return;
+            }
+            else {
+                alert('Анаграмма');
+                return;
+            }
+        }
+    } else alert('Не анаграмма');
+}
+function fe13() {
+    var str=prompt('Введите текст'),vowel=0;
+    var upstr=str.toLowerCase();
+    for (var i=0; i<str.length;i++) {
+        if ((upstr[i]==='q')||(upstr[i]==='e')||(upstr[i]==='y')||(upstr[i]==='u')||
+            (upstr[i]==='i')||(upstr[i]==='o')||(upstr[i]==='a')||(upstr[i]==='у')||
+            (upstr[i]==='е')||(upstr[i]==='а')||(upstr[i]==='о')||(upstr[i]==='э')||
+            (upstr[i]==='я')||(upstr[i]==='и')||(upstr[i]==='ю'))
+        {vowel++}
+    }
+    alert(vowel);
 }
