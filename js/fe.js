@@ -167,7 +167,7 @@ function fe13() {
 // sobes
 
 // проверка на простое число
-function fe14(){
+function fe14() {
     var num=+prompt('Введите число'),kol=2,c=0;
      if (num<2) {alert('Не простое'); return;}
      for (var i=2; i<num-1; i++) {
@@ -198,4 +198,44 @@ function fe16() {
      }
      alert(dp);
 }
-
+// отсортирован ли массив?
+function fe17() {
+    var arr=[-Infinity, -5, 0, 3, 9];
+    for (var i=0; i<arr.length-1; i++) {
+        if (arr[i]>arr[i+1]) {alert('False'); return;}
+    }
+    alert('True');
+}
+// собственный filter
+function fe18() {
+    var arr=[1,2,3,4,5,1,0,-5,Infinity];
+    var n=+prompt('Введите число');
+    var operation=prompt('Выберите операцию: < > <= >=');
+    var i=0;
+    switch(operation) {
+        case '<':
+            for (i=0; i<arr.length; i++) {
+                if (arr[i]>=n) {arr.splice(i,1);i--}
+            }
+            alert(arr);
+            break;
+        case '>':
+            for (i=0; i<arr.length; i++) {
+                if (arr[i]<=n) {arr.splice(i,1);i--}
+            }
+            alert(arr);
+            break;
+        case '<=':
+            for (i=0; i<arr.length; i++) {
+                if (arr[i]>n) {arr.splice(i,1);i--}
+            }
+            alert(arr);
+            break;
+        case '>=':
+            for (i=0; i<arr.length; i++) {
+                if (arr[i]<n) {arr.splice(i,1);i--}
+            }
+            alert(arr);
+            break;
+    }
+}
