@@ -122,15 +122,18 @@ function fe10() {
 }
 // homework 4
 function fe11() {
-    var word=prompt('Введите слово'), kl=0;
-     word=word.toUpperCase();
+    var word=prompt('Введите слово');
+      word=word.toUpperCase();
     var arrword=word.split('');
     var newarr=arrword.slice().reverse();
 
     for (i=0; i<word.length; i++) {
-        if (arrword[i]===newarr[i]) {} else {alert('Не палиндром'); return;}
+        if (arrword[i]!==newarr[i]) {
+            alert('Не палиндром');
+            return;
+        }
     }
-     alert('Палиндром');
+    alert('Палиндром');
 }
 function fe12() {
     var firstWord = prompt('Первое слово').toUpperCase(), secondWord = prompt('Второе слово').toUpperCase();
@@ -149,16 +152,17 @@ function fe12() {
     } else alert('Не анаграмма');
 }
 function fe13() {
-    var str=prompt('Введите текст'),vowel=0;
-    var upstr=str.toLowerCase();
-    for (var i=0; i<str.length;i++) {
-        if ((upstr[i]==='q')||(upstr[i]==='e')||(upstr[i]==='y')||(upstr[i]==='u')||
-            (upstr[i]==='i')||(upstr[i]==='o')||(upstr[i]==='a')||(upstr[i]==='у')||
-            (upstr[i]==='е')||(upstr[i]==='а')||(upstr[i]==='о')||(upstr[i]==='э')||
-            (upstr[i]==='я')||(upstr[i]==='и')||(upstr[i]==='ю'))
-        {vowel++}
+    var glas = 'qeyuioaуеыаоэяию';
+    var str = prompt(), kol = 0;
+
+    for (var i = 0; i < 16; i++) {
+        for (var j = 0; j < str.length; j++){
+            if (glas[i] === str[j]) {
+                kol++;
+            }
+        }
     }
-    alert(vowel);
+    alert(kol);
 }
 
 
