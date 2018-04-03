@@ -160,3 +160,42 @@ function fe13() {
     }
     alert(vowel);
 }
+
+
+
+
+// sobes
+
+// проверка на простое число
+function fe14(){
+    var num=+prompt('Введите число'),kol=2,c=0;
+     if (num<2) {alert('Не простое'); return;}
+     for (var i=2; i<num-1; i++) {
+          c=num % i;
+          if (c!==0) {alert('Не простое'); return;}
+      }
+      alert('Простое');
+}
+// возвращение факториала
+function fe15() {
+    var num=+prompt('Введите число'),fact=1;
+    if (num>1000) {alert(Infinity); return;}
+     for (var i=1; i<=num; i++) {
+       fact*=i;
+     }
+     alert(fact);
+}
+// фибоначи
+function fe16() {
+   var n=+prompt('Введите номер числа Фибоначи');
+   if (n>1400) {alert(Infinity); return;}
+   var arr=[1,1], dp=1;
+     for (var i=0; i<n-2; i++) {
+         arr[1]=arr[0];
+         arr[0]=dp;
+         dp=arr[0]+arr[1];
+         console.log(dp);
+     }
+     alert(dp);
+}
+
