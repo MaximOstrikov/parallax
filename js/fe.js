@@ -122,40 +122,29 @@ function fe10() {
 }
 // homework 4
 function fe11() {
-    var word=prompt('Введите слово');
-      word=word.toUpperCase();
-    var arrword=word.split('');
-    var newarr=arrword.slice().reverse();
-
-    for (i=0; i<word.length; i++) {
-        if (arrword[i]!==newarr[i]) {
-            alert('Не палиндром');
-            return;
-        }
-    }
-    alert('Палиндром');
+    var str1 = prompt().toLowerCase(),
+        str2 = str1.split('').reverse().join('');
+    (str1 === str2) ? alert('Палиндром') : alert('Не палиндром');
 }
 function fe12() {
-    var firstWord = prompt('Первое слово').toUpperCase(), secondWord = prompt('Второе слово').toUpperCase();
-    var firstArr = firstWord.split('').sort(), secondArr = secondWord.split('').sort();
-    if (firstWord.length === secondWord.length) {
-        for (i = 0; i < firstWord.length; i++) {
-            if (firstArr[i] !== secondArr[i]) {
-                alert('Не анаграмма');
-                return;
-            }
-            else {
-                alert('Анаграмма');
-                return;
-            }
-        }
-    } else alert('Не анаграмма');
+    var str1 = prompt().split('').sort().join(''),
+        str2 = prompt().split('').sort().join('');
+    (str1 === str2) ? alert('Анаграмма') : alert('Не анаграмма');
 }
+// var str1,str2;
+// function fe12(str1,str2) {
+//     if (str1.split('').sort().join('') === str2.split('').sort().join('')) {
+//         return 'Анаграмма'
+//     } else {
+//         return 'Не анаграмма';
+//     }
+// }
+// alert(fe12('кот','отк'));
 function fe13() {
-    var glas = 'qeyuioaуеыаоэяию';
-    var str = prompt(), kol = 0;
+    var glas = 'eyuioaуеыаоэяию';
+    var str = prompt().toLowerCase(), kol = 0;
 
-    for (var i = 0; i < 16; i++) {
+    for (var i = 0; i < 15; i++) {
         for (var j = 0; j < str.length; j++){
             if (glas[i] === str[j]) {
                 kol++;
@@ -243,3 +232,11 @@ function fe18() {
             break;
     }
 }
+// определение количества символов в строке
+function fe19() {
+    var text = prompt().toLowerCase(), kol=0;
+      kol = text.match(/[a-яё]/g).length;
+       console.log(kol);
+}
+
+
